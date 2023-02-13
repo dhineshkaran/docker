@@ -1,11 +1,9 @@
 pipeline{
     stages {
-    stage('Git checkout SCM') 
-    steps{
+    stage('Git checkout SCM') {
           git branch: 'main', credentialsId: 'gitcredentials', url: 'https://github.com/dhineshkaran/docker.git'
       }
-    stage('Build project')
-    steps{
+    stage('Build project'){
         sh 'mvn clean install -DskipTests'
     }   
   }
