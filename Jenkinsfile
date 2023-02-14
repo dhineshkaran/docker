@@ -2,10 +2,14 @@ pipeline{
     agent any
     stages{
         stage('GitCheckout'){
-            git branch: 'main', credentialsId: 'gitcredentials', url: 'https://github.com/dhineshkaran/docker.git'
+            steps {
+                git branch: 'main', credentialsId: 'gitcredentials', url: 'https://github.com/dhineshkaran/docker.git'
+            }
         }
         stage('build'){
-            sh 'mvn install'
+            steps {
+                sh 'mvn install'
+            }
         }
     }
 }
