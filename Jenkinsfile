@@ -8,6 +8,7 @@ pipeline {
 */	
     environment {
         NEXUS_USER = 'admin'
+        NEXUS_VERSION = nexus3
         NEXUS_PASS = 'admin'
         RELEASE_REPO = 'vpro-releases'
         CENTRAL_REPO = 'vprofile-maven-central'
