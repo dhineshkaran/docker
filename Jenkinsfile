@@ -1,9 +1,9 @@
 pipeline {
     agent any
-    tools {
-        maven "maven3"
-        JDK "OracleJDK8"
-    }
+    // tools {
+    //     maven "maven3"
+    //     JDK "OracleJDK8"
+    // }
     environment{
         NEXUS_USER = 'admin'
         NEXUS_PASS = 'admin'
