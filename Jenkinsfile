@@ -8,6 +8,13 @@ pipeline {
 */	
     environment {
         NEXUS_USER = 'admin'
+        NEXUS_VERSION = "nexus3"
+        NEXUS_PROTOCOL = "http"
+        NEXUS_URL = "172.31.45.123:8081"
+        NEXUS_REPOSITORY = "vpro-release"
+	    NEXUS_REPOGRP_ID    = "vprofile-group"
+        NEXUS_CREDENTIAL_ID = "nexuslogin"
+        ARTVERSION = "${env.BUILD_ID}"
         NEXUS_VERSION = 'nexus3'
         NEXUS_PASS = 'admin'
         RELEASE_REPO = 'vpro-releases'
